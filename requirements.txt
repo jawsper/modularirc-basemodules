@@ -1,0 +1,5 @@
+requests
+python-mpd
+python-dateutil
+hurry.filesize
+pytz
