@@ -15,8 +15,8 @@ setup(
     package_dir={'': 'src'},
     url='https://github.com/jawsper/modularirc-basemodules',
     license='LICENSE.txt',
-    description='The default modules of modularirc.',
-    long_description=open('README.md').read(),
+    description='Modules for modularirc.',
+    long_description=open('README.rst').read(),
     install_requires=[
         'modularirc',
         'requests',

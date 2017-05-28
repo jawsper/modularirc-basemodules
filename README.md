@@ -1,1 +1,0 @@
-# modularirc-basemodules
