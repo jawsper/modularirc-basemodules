@@ -32,7 +32,7 @@ class Module(BaseModule):
             return [self.cmd_reminder.__doc__]
         name = args[0].lower()
         message = ' '.join(args[1:])
-        for channel_name, channel in self.mgr.bot.channels.items():
+        for channel_name, channel in self.bot.channels.items():
             if channel.has_user(name):
                 return ['User {} is already present'.format(name)]
 
