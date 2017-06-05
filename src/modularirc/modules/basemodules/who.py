@@ -10,9 +10,7 @@ import logging
 
 class Module(BaseModule):
     """who: see who's here"""
-    def __init__(self, mgr):
-        super().__init__(mgr)
-
+    def enable(self):
         config = {}
         try:
             config['hosts'] = json.loads(self.get_config('hosts'))

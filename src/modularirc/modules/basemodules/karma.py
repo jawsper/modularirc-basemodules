@@ -5,13 +5,13 @@ from modularirc import BaseModule
 
 class Module(BaseModule):
     """karma: give or take karma. karma is given with !<something><operator> # <reason>. <operator> is ++ or --, reason is optional """
-    def start(self):
+    def enable(self):
         try:
             self.karma = json.loads(self.get_config('karma'))
         except:
             self.karma = []
 
-    def stop(self):
+    def disable(self):
         self.set_config('karma', json.dumps(self.karma))
     
     def on_privmsg( self, source, target, message ):

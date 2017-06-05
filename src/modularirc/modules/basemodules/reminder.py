@@ -8,12 +8,13 @@ from modularirc import BaseModule
 
 
 class Module(BaseModule):
-    def start(self):
+    def enable(self):
         try:
             self.reminders = json.loads(self.get_config('reminders'))
         except:
             self.reminders = {}
-    def __del__(self):
+
+    def disable(self):
         self.set_config('reminders', json.dumps(self.reminders))
 
     def on_join(self, connection, event):

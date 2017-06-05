@@ -106,7 +106,7 @@ class ZncLogReader:
 class Module(BaseModule):
     logfile = os.path.join(os.path.dirname(__file__), '..', 'ircbot.log')
 
-    def start(self):
+    def enable(self):
         try:
             self.log_path = self.get_config('log_path')
             self.network = self.get_config('network')

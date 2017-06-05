@@ -15,7 +15,7 @@ class NsApiException(Exception):
 
 class Module(BaseModule):
     """ns: Bot module to use the NS (Nederlandse Spoorwegen) API"""
-    def start(self):
+    def enable(self):
         self.username = self.password = None
         
         try:

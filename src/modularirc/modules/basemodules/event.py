@@ -5,9 +5,7 @@ from modularirc import BaseModule
 
 class Module(BaseModule):
     """event: Create and join an event."""
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
+    def enable(self):
         self.event = Event()
 
         try:
@@ -15,7 +13,7 @@ class Module(BaseModule):
         except Exception as e:
             pass
 
-    def __del__(self):
+    def disable(self):
         self.set_config('event', self.event.dump())
 
     def cmd_event(self, **kwargs):

@@ -10,7 +10,7 @@ class Module(BaseModule):
     """Bot module to search on google"""
     google_cache_file = os.path.join(os.path.dirname(__file__), '.google_cache')
 
-    def start(self):
+    def enable(self):
         self.api_key = self.cx = None
 
         try:
